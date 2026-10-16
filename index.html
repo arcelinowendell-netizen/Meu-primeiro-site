@@ -1,13 +1,61 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/index.js"></script>
-  <title>html.index</title>
+  <title>ARQUIVO 001</title>
+  <style>
+    body {
+      background: #080b08;
+      color: #b8c9b5;
+      font-family: monospace;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    .painel {
+      max-width: 600px;
+      margin: 50px auto;
+      border: 1px solid #344536;
+      padding: 25px;
+      background: #101510;
+    }
+
+    h1 { color: #d5e8ce; letter-spacing: 4px; }
+    .alerta { color: #e34b4b; }
+    button {
+      background: #263b29;
+      color: white;
+      border: 1px solid #6b896d;
+      padding: 12px 20px;
+      font-family: monospace;
+      cursor: pointer;
+    }
+
+    #mensagem { display: none; margin-top: 25px; }
+  </style>
 </head>
 <body>
-	<h1>html.index</h1>
+  <div class="painel">
+    <p>ARQUIVO DIGITAL // 001</p>
+    <h1>VOCÊ ESTÁ SENDO OBSERVADO</h1>
+    <p>Sistema de monitoramento iniciado.</p>
+    <p class="alerta">AVISO: REGISTRO INCOMPLETO</p>
+
+    <button onclick="revelar()">ACESSAR ARQUIVO</button>
+
+    <div id="mensagem">
+      <p>Registro recuperado...</p>
+      <p>Se você está lendo isto, não deveria estar aqui.</p>
+      <p class="alerta">ERRO 001 // SINAL PERDIDO</p>
+    </div>
+  </div>
+
+  <script>
+    function revelar() {
+      document.getElementById("mensagem").style.display = "block";
+    }
+  </script>
 </body>
 </html>
